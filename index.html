@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZV & Vision</title>
+    <title>𝚉𝚅 & 𝚅𝚒𝚜𝚒𝚘𝚗</title>
     <style>
         /* General Reset */
         * {
@@ -16,7 +16,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            color: #333;
+            color: #000000;
         }
 
         /* Header Styling */
@@ -24,7 +24,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #333;
+            background: #000000;
             color: #fff;
             padding: 1rem;
         }
@@ -63,14 +63,16 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            padding: 1rem;
+            gap: 0;
+            padding: 0;
         }
 
         /* About Section Styling */
         .about {
             padding: 2rem;
             text-align: center;
+            background-color: #000000;
+            color: #fff;
         }
 
         /* Flip Card Container */
@@ -79,7 +81,6 @@
             width: 100%;
             aspect-ratio: 1 / 1;
             overflow: hidden;
-            border-radius: 8px;
         }
 
         /* Flip Card Inner */
@@ -107,11 +108,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
         }
 
         .flip-card-back {
-            background: #333;
+            background: #000000;
             color: #fff;
             display: flex;
             align-items: center;
@@ -119,12 +119,11 @@
             text-align: center;
             padding: 1rem;
             transform: rotateY(180deg);
-            border-radius: 8px;
         }
 
         /* Footer Styling */
         footer {
-            background: #333;
+            background: #000000;
             color: #fff;
             text-align: center;
             padding: 1rem;
@@ -145,12 +144,13 @@
 <body>
     <!-- Header Section -->
     <header>
-        <h1>ZV & Vision – Kiran’s View</h1>
+        <h1>𝓩𝓥 & 𝓥𝓲𝓼𝓲𝓸𝓷 – 𝓚𝓲𝓻𝓪𝓷’𝓼 𝓥𝓲𝓮𝔀</h1>
         <link rel="icon" type="image/png" href="sony.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <!-- Navigation Links -->
         <nav>
-            <a href="#gallery">Gallery</a>
-            <a href="#about">About</a>
+            <a href="#gallery">𝓖𝓪𝓵𝓵𝓮𝓻𝔂</a>
+            <a href="#about">𝓐𝓫𝓸𝓾𝓽</a>
         </nav>
 
         <!-- Profile Picture -->
@@ -163,7 +163,7 @@
         <div class="flip-card" onclick="flipCard(this)">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="1.jpeg" alt="Photo 1">
+                    <img src="n2.jpg" alt="Photo 1">
                 </div>
                 <div class="flip-card-back">
                     <p>Aperture: f/5.6<br>Focal Length: 50mm<br>ISO: 50<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
@@ -175,7 +175,7 @@
         <div class="flip-card" onclick="flipCard(this)">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="2.jpeg" alt="Photo 2">
+                    <img src="n3.jpg" alt="Photo 2">
                 </div>
                 <div class="flip-card-back">
                     <p>Aperture: f/4.0<br>Focal Length: 24mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
@@ -186,7 +186,7 @@
         <div class="flip-card" onclick="flipCard(this)">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="3.jpeg" alt="Photo 1">
+                    <img src="n4.jpg" alt="Photo 3">
                 </div>
                 <div class="flip-card-back">
                     <p>Aperture: f/5.6<br>Focal Length: 41mm<br>ISO: 500<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
@@ -219,7 +219,7 @@
         <div class="flip-card" onclick="flipCard(this)">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="6.jpeg" alt="Photo 1">
+                    <img src="6.jpeg" alt="Photo 6">
                 </div>
                 <div class="flip-card-back">
                     <p>Aperture: f/5.6<br>Focal Length: 50mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
@@ -230,7 +230,7 @@
         <div class="flip-card" onclick="flipCard(this)">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="7.jpeg" alt="Photo 1">
+                    <img src="7.jpeg" alt="Photo 7">
                 </div>
                 <div class="flip-card-back">
                     <p>Aperture: f/5.6<br>Focal Length: 34mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
@@ -276,14 +276,18 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
+        <h2>𝓐𝓫𝓸𝓾𝓽 𝓜𝓮</h2>
         <p>Hi, I'm Kiran, a passionate photographer using a Sony ZV-E10 with a kit lens to capture the world. My work is all about bringing out the essence of each moment and creating a lasting impression.</p>
         <p>Welcome to my portfolio – explore my gallery and experience my vision through the lens.</p>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>© ZV & Vision | Follow me on social media!</p>
+        <p>© 𝓩𝓥 & 𝓥𝓲𝓼𝓲𝓸𝓷 | 𝓕𝓸𝓵𝓵𝓸𝔀 𝓶𝓮 𝓸𝓷 𝓼𝓸𝓬𝓲𝓪𝓵 𝓶𝓮𝓭𝓲𝓪!</p>
+        <!-- Instagram Icon Link -->
+        <a href="https://www.instagram.com/zv_vision" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram" style="color: #fff; font-size: 1.5rem; padding: 0.5rem;"></i>
+        </a>
     </footer>
 
     <script>
