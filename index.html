@@ -63,7 +63,7 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1px;
+            gap: 0;
             padding: 0;
         }
 
@@ -150,6 +150,7 @@
         <!-- Navigation Links -->
         <nav>
             <a href="#gallery">𝓖𝓪𝓵𝓵𝓮𝓻𝔂</a>
+            <a href="#" onclick="showComingSoon()">𝓥𝓲𝓭𝓮𝓸𝓼</a>
             <a href="#about">𝓐𝓫𝓸𝓾𝓽</a>
         </nav>
 
@@ -302,6 +303,9 @@
             setTimeout(() => {
                 innerCard.classList.remove('clicked');
             }, 4000);
+        }
+        function showComingSoon() {
+        alert("Coming Soon!");
         }
     </script>
 </body>
