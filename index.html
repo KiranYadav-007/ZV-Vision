@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZV & Vision</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* Profile Picture Styling */
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+
+        /* Navigation Links */
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        /* About Section Styling */
+        .about {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Flip Card Container */
+        .flip-card {
+            perspective: 1000px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        /* Flip Card Inner */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .flip-card-inner.clicked {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .flip-card-back {
+            background: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            transform: rotateY(180deg);
+            border-radius: 8px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>ZV & Vision – Kiran’s View</h1>
+        <link rel="icon" type="image/png" href="sony.png">
+        <!-- Navigation Links -->
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <!-- Profile Picture -->
+        <img src="profile.jpeg" alt="Profile Picture" class="profile-pic">
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <!-- Flip Card 1 -->
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="1.jpeg" alt="Photo 1">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 50mm<br>ISO: 50<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat Flip Card Structure for More Photos -->
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="2.jpeg" alt="Photo 2">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/4.0<br>Focal Length: 24mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="3.jpeg" alt="Photo 1">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 41mm<br>ISO: 500<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="4.jpeg" alt="Photo 4">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 47mm<br>ISO: 50<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="5.jpeg" alt="Photo 5">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 48mm<br>ISO: 50<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="6.jpeg" alt="Photo 1">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 50mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="7.jpeg" alt="Photo 1">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 34mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="8.jpeg" alt="Photo 8">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 34mm<br>ISO: 100<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="9.jpeg" alt="Photo 9">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 50mm<br>ISO: 640<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="10.jpeg" alt="Photo 10">
+                </div>
+                <div class="flip-card-back">
+                    <p>Aperture: f/5.6<br>Focal Length: 39mm<br>ISO: 400<br>Lens: Sony 16-50mm F3.5-5.6 OSS</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more flip cards as needed -->
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Kiran, a passionate photographer using a Sony ZV-E10 with a kit lens to capture the world. My work is all about bringing out the essence of each moment and creating a lasting impression.</p>
+        <p>Welcome to my portfolio – explore my gallery and experience my vision through the lens.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© ZV & Vision | Follow me on social media!</p>
+    </footer>
+
+    <script>
+        function flipCard(card) {
+            // Get the inner card element
+            const innerCard = card.querySelector('.flip-card-inner');
+
+            // Add the 'clicked' class to flip the card
+            innerCard.classList.add('clicked');
+
+            // Set a timer to remove the 'clicked' class after 2 seconds
+            setTimeout(() => {
+                innerCard.classList.remove('clicked');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
