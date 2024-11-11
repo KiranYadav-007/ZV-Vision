@@ -67,6 +67,19 @@
             padding: 0;
         }
 
+        /* Initial state for images - hidden and slightly shifted */
+        .gallery .flip-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        /* When in-view, make images visible with a smooth transition */
+        .gallery .flip-card.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* About Section Styling */
         .about {
             padding: 2rem;
@@ -292,6 +305,32 @@
     </footer>
 
     <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+    
+        // Function to add in-view class when element enters viewport
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.gallery .flip-card');
+            cards.forEach(card => {
+                if (isInViewport(card)) {
+                    card.classList.add('in-view');
+                } else {
+                    card.classList.remove('in-view');
+                }
+            });
+        }
+    
+        // Event listener to animate cards on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    
+        // Initial check on page load
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
         function flipCard(card) {
             // Get the inner card element
             const innerCard = card.querySelector('.flip-card-inner');
